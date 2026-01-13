@@ -55,6 +55,7 @@ ANALIZY_ARMAG <- dplyr::select(ANALIZY_ARMAG,"Właściciel","ŚREDNIE TEMPERATUR
 #Zmiana wszystkich kolumn na pisane wielką literą     
 analizy <- dplyr::rename_with(analizy,\(x)toupper(x)) 
 
+#dopasowanie przez left join danych z 2020r
 full_analiza20 <- dplyr::left_join(r2020, sandomierska, by= dplyr::join_by(...1 == "2020"))
 
 #Analiza danych
